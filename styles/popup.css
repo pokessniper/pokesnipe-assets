@@ -1,0 +1,459 @@
+/* PokeSnipe Extension - External Popup Styles */
+/* Host this file on GitHub Pages or use raw GitHub URLs */
+
+body {
+    width: 300px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #2f3136;
+    color: white;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+}
+
+.logo-left {
+    order: 1;
+}
+
+.logo-right {
+    order: 3;
+    width: 40px;
+    height: 40px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    order: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+    background: linear-gradient(90deg, #00e259 0%, #00e259 25%, #00c950 35%, #ffffff 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+}
+
+.btn {
+    background: #00e259;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.btn:hover {
+    background: #00c950;
+}
+
+.btn.secondary {
+    background: #4f545c;
+}
+
+.btn.secondary:hover {
+    background: #5d6269;
+}
+
+.btn.danger {
+    background: #ed4245;
+}
+
+.btn.danger:hover {
+    background: #c73e41;
+}
+
+.btn.success {
+    background: #00e259;
+    color: #fff;
+}
+
+.btn.success:hover {
+    background: #00c950;
+}
+
+.status {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.success {
+    background: #00e259;
+    color: #fff;
+    font-weight: bold;
+}
+
+.error {
+    background: #ed4245;
+    color: white;
+}
+
+.user-info {
+    background: linear-gradient(135deg, #36393f 0%, #40444b 100%);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    border: 1px solid rgba(0, 226, 89, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.menu-section {
+    margin: 15px 0;
+}
+
+.menu-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00e259;
+}
+
+.feature-btn {
+    margin: 5px 0;
+    padding: 10px 16px;
+    font-size: 13px;
+}
+
+.hidden {
+    display: none;
+}
+
+.input-group {
+    margin: 10px 0;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #AAAAAA;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px 12px;
+    background: #40444B;
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+#skuField {
+    width: 100%;
+    padding: 8px 12px;
+    background: #40444B;
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    outline: none;
+    background: #36393f;
+}
+
+.input-group input::placeholder {
+    color: #72767d;
+}
+
+.save-status {
+    font-size: 10px;
+    color: #72767d;
+    margin-top: 3px;
+    min-height: 12px;
+}
+
+.save-status.saving {
+    color: #faa61a;
+}
+
+.save-status.saved {
+    color: #00e259;
+}
+
+/* Error popup styles */
+.error-popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ed4245;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+    font-size: 13px;
+    max-width: 280px;
+    text-align: center;
+    animation: slideDown 0.3s ease-out;
+}
+
+.error-popup.success {
+    background: #57f287;
+    color: #2c2f33;
+}
+
+.error-popup.warning {
+    background: #faa61a;
+    color: #2c2f33;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.error-popup.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+}
+
+/* Module Cards */
+.modules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.module-card {
+    background: #36393f;
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.module-card:hover {
+    background: #40444b;
+    border-color: #00e259;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 226, 89, 0.3);
+}
+
+.module-card.coming-soon {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.module-card.coming-soon:hover {
+    transform: none;
+    border-color: transparent;
+    box-shadow: none;
+    background: #36393f;
+}
+
+.module-icon {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: #00e259;
+    background: rgba(0, 226, 89, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+.module-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.module-description {
+    font-size: 12px;
+    color: #AAAAAA;
+    line-height: 1.3;
+}
+
+/* Header Navigation */
+.header-nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header-nav .btn {
+    padding: 8px 16px;
+    font-size: 12px;
+    margin: 0;
+}
+
+.module-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.module-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    color: #00e259;
+}
+
+/* Responsive grid for smaller popup */
+@media (max-width: 350px) {
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dynamic Product Fields */
+.products-container {
+    margin: 15px 0;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #AAAAAA;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-icon {
+    background: #00e259;
+    color: white;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+    background: #00c950;
+    transform: scale(1.1);
+}
+
+.product-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: flex-end;
+}
+
+.product-row .input-group {
+    margin: 0;
+    flex: 1;
+}
+
+.product-row .input-group label {
+    margin-bottom: 3px;
+    font-size: 11px;
+}
+
+.quantity-input {
+    flex: 0 0 60px;
+}
+
+.quantity-input input {
+    text-align: center;
+}
+
+.remove-product {
+    background: #ffb3b3;
+    color: #8B0000;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    margin-bottom: 3px;
+}
+
+.remove-product:hover {
+    background: #ff9999;
+    transform: scale(1.1);
+}
+
+.clear-all-btn {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 10px 0;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.clear-all-btn:hover {
+    background: #5a6268;
+}

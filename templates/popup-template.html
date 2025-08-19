@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- External CSS will be loaded dynamically -->
+    <link id="external-css" rel="stylesheet" href="">
+    <style id="fallback-css">
+        /* Minimal fallback styles in case external CSS fails to load */
+        body { width: 300px; padding: 20px; font-family: Arial, sans-serif; background: #2f3136; color: white; }
+        .btn { background: #00e259; color: white; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-size: 14px; margin: 10px 0; width: 100%; }
+        .hidden { display: none; }
+        .error { background: #ed4245; color: white; padding: 10px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://cdn.discordapp.com/attachments/1400687288236642366/1406888082640470106/logo_vector.png?ex=68a41a21&is=68a2c8a1&hm=a1149afb10ef6808395bee61132c47d192a5550ea489c5bae9c89962df141e60&" alt="PokeSnipe Logo" class="logo logo-left">
+        <h3 class="title">Amenity X PokeSnipe</h3>
+        <img src="https://cdn.discordapp.com/attachments/1402115313826529531/1406938780903931914/yesse.png?ex=68a44959&is=68a2f7d9&hm=feddef47684ef0b094c3ac211a25f39c6a15c6c70db95241eb8b45dddb09d357&" alt="Amenity Logo" class="logo logo-right">
+    </div>
+    
+    <!-- Login Screen -->
+    <div id="loginScreen">
+        <div id="status">Please authenticate</div>
+        <button id="loginBtn" class="btn">Login with Discord</button>
+    </div>
+    
+    <!-- Landing Screen - Module Selection -->
+    <div id="landingScreen" class="hidden">
+        <div id="userInfo" class="user-info"></div>
+        
+        <div class="menu-section">
+            <div class="menu-title">Available Modules</div>
+            <div class="modules-grid">
+                <div class="module-card" id="ebGamesModule">
+                    <div class="module-icon">EB</div>
+                    <div class="module-name">EB Games</div>
+                    <div class="module-description">Add to Cart automation</div>
+                </div>
+                <!-- Future modules will be added here -->
+                <div class="module-card coming-soon">
+                    <div class="module-icon">+</div>
+                    <div class="module-name">More Coming</div>
+                    <div class="module-description">Stay tuned...</div>
+                </div>
+            </div>
+        </div>
+        
+        <button id="logoutBtn" class="btn danger">Logout</button>
+    </div>
+
+    <!-- EB Games Module Screen -->
+    <div id="ebGamesScreen" class="hidden">
+        <div class="header-nav">
+            <button id="backToLanding" class="btn secondary">Back</button>
+        </div>
+        <div class="module-header">
+            <div class="module-title">EB Games ATC</div>
+        </div>
+        
+        <div class="menu-section">
+            <div class="products-container">
+                <div class="products-header">
+                    <span>Products to Add</span>
+                    <button id="addProductBtn" class="btn-icon">+</button>
+                </div>
+                <div id="productsFields">
+                    <!-- Dynamic product fields will be added here -->
+                </div>
+                <button id="clearAllBtn" class="clear-all-btn">Clear All Items</button>
+            </div>
+            <button id="atcBtn" class="btn feature-btn success">ATC (Add To Cart)</button>
+        </div>
+        
+        <button id="logoutFromModule" class="btn danger">Logout</button>
+    </div>
+    
+    <!-- JavaScript will be loaded dynamically -->
+    <script id="popup-script" src=""></script>
+</body>
+</html>

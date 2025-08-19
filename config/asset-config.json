@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "assets": {
+    "css": {
+      "popup": {
+        "github_pages": "https://pokessniper.github.io/pokesnipe-assets/styles/popup.css",
+        "github_raw": "https://raw.githubusercontent.com/pokessniper/pokesnipe-assets/main/styles/popup.css",
+        "fallback": "inline"
+      }
+    },
+    "templates": {
+      "popup": {
+        "github_pages": "https://pokessniper.github.io/pokesnipe-assets/templates/popup-template.html",
+        "github_raw": "https://raw.githubusercontent.com/pokessniper/pokesnipe-assets/main/templates/popup-template.html",
+        "fallback": "embedded"
+      }
+    }
+  },
+  "cdn_config": {
+    "primary_host": "github_raw",
+    "fallback_host": "github_pages",
+    "cache_duration": 300000,
+    "retry_attempts": 3,
+    "retry_delay": 1000
+  },
+  "features": {
+    "auto_update": true,
+    "version_check": true,
+    "offline_support": true
+  }
+}
